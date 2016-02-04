@@ -30,18 +30,22 @@ public class MainActivity extends ActionBarActivity {
         if(state[tag]==2 && active==0)
         {
 
-            im.setTranslationX(-1000f);
+
             if (player == 1) {
+                im.setTranslationX(-1000f);
                 im.setImageResource(R.drawable.temp);
+                im.animate().translationXBy(1000f).rotation(360f).setDuration(200);
                 state[tag]=0;
                 player = 0;
             } else {
+                im.setTranslationY(-1000f);
                 im.setImageResource(R.drawable.cross);
+                im.animate().translationYBy(1000f).rotation(360f).setDuration(200);
                 player = 1;
                 state[tag]=1;
             }
 
-            im.animate().translationXBy(1000f).rotation(360f).setDuration(200);
+
             counter++;
         }
         if(counter>4)
