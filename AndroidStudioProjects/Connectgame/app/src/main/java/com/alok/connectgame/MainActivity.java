@@ -102,7 +102,8 @@ public class MainActivity extends ActionBarActivity {
                  {
                      win=1;
                      winner=3;
-                     Log.i("check", "Its a draw");
+                     Log.i("check", "It's a draw");
+                     return;
                  }
              }
     }
